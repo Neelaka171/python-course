@@ -23,4 +23,22 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 # print(password)
 
 #hard way
-password = ""
+password_list = []
+
+for char in range(0,nr_letters):
+    password_list.append(random.choice(letters))
+print(password_list)
+
+for char in range(0,nr_symbols):
+    password_list.append(random.choice(symbols))
+print(password_list)
+
+for char in range(0,nr_numbers):
+    password_list.append(random.choice(numbers))
+print(password_list)
+
+password =""
+
+for pwd in password_list:
+    password += random.choice(password_list)
+print(password)
